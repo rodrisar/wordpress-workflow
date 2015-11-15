@@ -30,6 +30,12 @@ if [[ ! -d "$DIR/../src/database" ]]; then
     mkdir $DIR/../src/database
 fi
 
+if [[ ! -d "$DIR/../src/site" ]]; then
+    mkdir $DIR/../src/site
+    cd $DIR/../src/site
+    touch empty
+fi
+
 echo "Setting configuration files"
 
 if [[ ! -f  "$DIR/../Vagrantfile" ]]; then
