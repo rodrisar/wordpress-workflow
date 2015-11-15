@@ -1,4 +1,5 @@
 dist/
 backup/
+uploads/
 *.pyc
 .vagrant
