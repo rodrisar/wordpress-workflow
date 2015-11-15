@@ -54,23 +54,12 @@ if [ ! -f "$APP_TOKEN" ]; then
     touch $APP_TOKEN
     echo $RANDOM > $APP_TOKEN
 fi
-# Activates site
 
-# Apache
-cp /home/vagrant/templates/wordpress.apache /etc/apache2/sites-available/wordpress
-cp /home/vagrant/templates/httpd.conf /etc/apache2/conf.d/httpd.conf
-a2enmod actions
-a2dissite default
-a2ensite wordpress
-service apache2 stop
+# Copy virtualhost creator (nginx, apache)
 
-# Nginx
-cp /home/vagrant/templates/wordpress.nginx /etc/nginx/sites-available/wordpress
-cp /home/vagrant/templates/www.conf /etc/php5/fpm/pool.d/www.conf
-cp /home/vagrant/templates/nginx.conf /etc/nginx/nginx.conf
-cp /home/vagrant/templates/nginx.conf /home/vagrant/nginx.conf
-rm  /etc/nginx/sites-enabled/*
-ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/
-service php5-fpm restart
-service nginx restart
-export WP_ENV=production
+cd /usr/local/bin
+cp /home/vagrant/provision/virtualhost/virtualhost.sh virtualhost
+chmod +x virtualhost
+cp /home/vagrant/provision/virtualhost/virtualhost-nginx.sh virtualhost-nginx
+chmod +x virtualhost-nginx
+cd -
