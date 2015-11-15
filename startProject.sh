@@ -36,6 +36,12 @@ if [[ ! -d "$DIR/../src/site" ]]; then
     touch empty
 fi
 
+if [[ ! -d "$DIR/../src/uploads" ]]; then
+    mkdir $DIR/../src/uploads
+    cd $DIR/../src/uploads
+    touch empty
+fi
+
 echo "Setting configuration files"
 
 if [[ ! -f  "$DIR/../Vagrantfile" ]]; then
