@@ -48,7 +48,7 @@ if [[ ! -f  "$DIR/../fabfile.py" ]]; then
     ln -s $DIR/fabfile.py $DIR/../fabfile.py
 fi
 
-if [[ ! -f  "$DIR/../customfile.py" ]]; then
+if [[ ! -f  "$DIR/../customfab.py" ]]; then
     cp $DIR/customfab.py $DIR/../customfab.py
 fi
 
