@@ -16,8 +16,8 @@ from fabutils.tasks import ursync_project, ulocal, urun
 @task
 def custom_task():
     """
-    Example of custom task, can be called using `fab environment:your_env cutomfile.custom_task`.
+    Example of custom task, can be called using `fab environment:your_env customfab.custom_task`.
     """
-    print "Example of custom task, can be called using `fab environment:your_env cutomfile.custom_task`."
+    print "Example of custom task, can be called using `fab environment:your_env customfab.custom_task`."
 
 # After this line you can put all your custom tasks
