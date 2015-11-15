@@ -20,11 +20,13 @@ Vagrant.configure("2") do |config|
   ## Default site folder
   config.vm.provision "file", source:"src/site/", destination: vagrant_config['public_dir']
 
+  ## Creates each vhost (site, api) dynamically
   config.vm.provision "shell" do |s|
     s.path="wordpress-workflow/provision/vhosts.sh"
     s.args = [vagrant_config['url'], vagrant_config['public_dir'], api_config['url'], api_config['public_dir']]
   end
 
+  # Creates vhosts for wordpress-workflow
   config.vm.provision "shell", path: "wordpress-workflow/provision/postprovision.sh"
 
   # Private IP
