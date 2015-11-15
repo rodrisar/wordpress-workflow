@@ -30,7 +30,7 @@ def environment(env_name, debug=False):
             schemas_dir + "environment_schema.json"
         )
         env.is_vagrant = False
-        if env_name == "vagrant":
+        if env_name == "vagrant" or env_name == "api":
             result = ulocal('vagrant ssh-config | grep IdentityFile',
                             capture=True)
             env.key_filename = result.split()[1].replace('"', '')
