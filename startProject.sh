@@ -12,22 +12,32 @@ echo "Creating directory structure"
 
 if [[ ! -d "$DIR/../src" ]]; then
     mkdir $DIR/../src
+    cd $DIR/../src
+    touch empty
 fi
 
 if [[ ! -d "$DIR/../src/themes" ]]; then
     mkdir $DIR/../src/themes
+    cd $DIR/../src/themes
+    touch empty
 fi
 
 if [[ ! -d "$DIR/../src/plugins" ]]; then
     mkdir $DIR/../src/plugins
+    cd $DIR/../src/plugins
+    touch empty
 fi
 
 if [[ ! -d "$DIR/../src/init" ]]; then
     mkdir $DIR/../src/init
+    cd $DIR/../src/init
+    touch empty
 fi
 
 if [[ ! -d "$DIR/../src/database" ]]; then
     mkdir $DIR/../src/database
+    cd $DIR/../src/database
+    touch empty
 fi
 
 if [[ ! -d "$DIR/../src/site" ]]; then
