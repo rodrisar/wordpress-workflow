@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
 
   # Hosts
   config.vm.hostname = "www.wordpress-workflow.local"
-  config.hostsupdater.aliases = ["wordpress-workflow.local", vagrant_config['url']]
+  config.hostsupdater.aliases = ["wordpress-workflow.local", vagrant_config['url'], api_config['url']]
 
   # Shared folders.
   config.vm.synced_folder "src", "/home/vagrant/wordpress-workflow"
