@@ -13,9 +13,10 @@ Vagrant.configure("2") do |config|
   #provisioning
   config.vm.provision "shell", path: "wordpress-workflow/provision/preprovision.sh"
   config.vm.provision "file", source:"wordpress-workflow/provision/templates/", destination: "/home/vagrant/templates/"
+  config.vm.provision "file", source:"wordpress-workflow/provision/", destination: "/home/vagrant/provision/"
   config.vm.provision "shell", path: "wordpress-workflow/provision/provision.sh"
 
-  # Private IP  
+  # Private IP
   config.vm.network :private_network, ip: "192.168.33.77"
 
   # Hosts
