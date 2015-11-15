@@ -62,6 +62,10 @@ if [[ ! -f  "$DIR/../fabfile.py" ]]; then
     ln -s $DIR/fabfile.py $DIR/../fabfile.py
 fi
 
+if [[ ! -f  "$DIR/../customfile.py" ]]; then
+    cp $DIR/customfab.py $DIR/../customfab.py
+fi
+
 if [[ ! -f  "$DIR/../environments.json" ]]; then
     cp $DIR/defaults/environments.json $DIR/../environments.json
 fi
