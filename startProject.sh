@@ -76,3 +76,4 @@ fi
 
 cd $DIR/../
 vagrant up
+wordpress-workflow/provision/githooks/bin/git/init-hooks

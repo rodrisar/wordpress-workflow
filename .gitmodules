@@ -1,3 +1,6 @@
 [submodule "provision/virtualhost"]
 	path = provision/virtualhost
 	url = git@github.com:rodrisar/virtualhost.git
+[submodule "provision/githooks"]
+	path = provision/githooks
+	url = git@github.com:rodrisar/githooks.git
